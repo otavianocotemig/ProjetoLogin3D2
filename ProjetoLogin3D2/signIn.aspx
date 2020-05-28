@@ -18,10 +18,11 @@
             <br />
             <asp:Button ID="btnSignin" runat="server" Text="Login" />
             <p>
-
+                 <asp:Button ID="Button1" runat="server" Text="Button" />
             </p>
             <asp:Label ID="lblNomeEmpresa" runat="server" Text="NomeEmpresa"></asp:Label>
         </div>
+       
         
     </form>
 </body>
