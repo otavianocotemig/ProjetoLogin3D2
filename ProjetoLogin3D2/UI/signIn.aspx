@@ -6,12 +6,13 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title>Sign In</title>
+    <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
+        <div class="container-fluid">
             <asp:Label ID="lblEmail" runat="server" Text="Email "></asp:Label>
-            <asp:TextBox ID="txtEmail" type="email" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtEmail" type="email" runat="server" CssClass="form-control" ></asp:TextBox>
             <br />
             <asp:Label ID="lblSenha" runat="server" Text="Senha "></asp:Label>
             <asp:TextBox ID="txtSenha" type="password" runat="server"></asp:TextBox>
@@ -19,7 +20,10 @@
             <asp:Button ID="btnSignin" runat="server" Text="Login" />
             <p>
                 
+                <asp:LinkButton ID="btnCadastrar" runat="server">Não sou cadastrado. Clique aqui.</asp:LinkButton>
+                
             </p>
+
             <asp:Label ID="lblNomeEmpresa" runat="server" Text="NomeEmpresa"></asp:Label>
         </div>
        
