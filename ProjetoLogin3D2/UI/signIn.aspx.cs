@@ -13,6 +13,7 @@ namespace ProjetoLogin3D2
         protected void Page_Load(object sender, EventArgs e)
         {
             lblNomeEmpresa.Text = ConfigurationManager.AppSettings.Get("NomeEmpresa");
+
         }
     }
 }
