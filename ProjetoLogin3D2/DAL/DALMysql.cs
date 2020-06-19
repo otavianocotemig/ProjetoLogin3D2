@@ -23,7 +23,7 @@ namespace ProjetoLogin3D2.DAL
             }
             catch (MySqlException e)
             {
-                throw new Exception("Problemas ao conectar com o Banco de Dados. Erro: " + e.Message);
+                throw new Exception("Problemas ao conectar com o Banco de Dados. \nErro: " + e.Message);
             }
         }
 
