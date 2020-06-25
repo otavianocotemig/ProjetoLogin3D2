@@ -47,5 +47,27 @@ namespace ProjetoLogin3D2
             }
 
         }
+
+        protected void btnEsqueciSenha_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+                msgerro.Visible = true;
+                tblClienteDTO cliente = new tblClienteDTO();
+                cliente.Email_cliente = txtEmail.Text;
+                tblClienteBLL bllCliente = new tblClienteBLL();
+                msgerro.Text = bllCliente.RecuperarSenha(cliente.Email_cliente);
+                txtSenha.Text = bllCliente.RecuperarSenha(cliente.Email_cliente);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
+        }
     }
 }

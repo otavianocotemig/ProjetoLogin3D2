@@ -25,5 +25,21 @@ namespace ProjetoLogin3D2.BLL
                 return false;
             }
         }
+
+        // Criação do metodo para recuperar a senha do usuário
+        public string RecuperarSenha(string email)
+        {
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = daoBanco.executarConsulta(consulta);
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0]["senha_cliente"].ToString();
+            }
+            else
+            {
+                return "Senha nâo localizada";    
+            }
+        }
+
     }
 }
