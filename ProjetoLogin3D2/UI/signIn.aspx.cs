@@ -31,8 +31,10 @@ namespace ProjetoLogin3D2
                 tblClienteBLL bllCliente = new tblClienteBLL();
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
+                    Session["usuario"] = cliente.Email_cliente;
                     msgerro.Visible = true;
-                    msgerro.Text = "Email localizado";
+                    msgerro.Text = "Seja Bem Vindo";
+                    Response.Redirect("FrmMain.aspx");
                 }
                 else
                 {
