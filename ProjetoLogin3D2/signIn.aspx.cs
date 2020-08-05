@@ -34,7 +34,7 @@ namespace ProjetoLogin3D2
                     Session["usuario"] = cliente.Email_cliente;
                     msgerro.Visible = true;
                     msgerro.Text = "Seja Bem Vindo";
-                    Response.Redirect("FrmMain.aspx");
+                    Response.Redirect("/UI/FrmMain.aspx");
                 }
                 else
                 {
