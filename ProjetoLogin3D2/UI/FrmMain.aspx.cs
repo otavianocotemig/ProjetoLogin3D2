@@ -12,6 +12,11 @@ namespace ProjetoLogin3D2.UI
         protected void Page_Load(object sender, EventArgs e)
         {
             this.emailUsuario.Text = Session["usuario"].ToString();
+            // verificando se usuário é administrador
+            if (Session["tipoUsuario"].ToString() == "1")
+            {
+                this.btnAdministracao.Visible = false;
+            }
         }
     }
 }

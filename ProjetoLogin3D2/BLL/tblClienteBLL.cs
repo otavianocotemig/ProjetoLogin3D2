@@ -41,5 +41,20 @@ namespace ProjetoLogin3D2.BLL
             }
         }
 
+        public string RecuperarTipoUsuario(string email)
+        {
+            string consulta = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            DataTable dt = daoBanco.executarConsulta(consulta);
+           
+            if (dt.Rows.Count == 1)
+            {
+                return dt.Rows[0]["tp_usuario"].ToString();
+            }
+            else
+            {
+                return "Tipo não Localizado";
+            }
+        }
+
     }
 }

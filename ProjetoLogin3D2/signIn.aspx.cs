@@ -32,6 +32,8 @@ namespace ProjetoLogin3D2
                 if (bllCliente.Autenticar(cliente.Email_cliente, cliente.Senha_cliente))
                 {
                     Session["usuario"] = cliente.Email_cliente;
+                    Session["tipoUsuario"] = bllCliente.RecuperarTipoUsuario(cliente.Email_cliente);
+
                     msgerro.Visible = true;
                     msgerro.Text = "Seja Bem Vindo";
                     Response.Redirect("/UI/FrmMain.aspx");
