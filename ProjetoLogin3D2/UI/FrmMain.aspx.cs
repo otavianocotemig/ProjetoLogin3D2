@@ -18,5 +18,10 @@ namespace ProjetoLogin3D2.UI
                 this.btnAdministracao.Visible = false;
             }
         }
+
+        protected void btnMeuPerfil_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/UI/FrmMeuPerfil.aspx");
+        }
     }
 }
