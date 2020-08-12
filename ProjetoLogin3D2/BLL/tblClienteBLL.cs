@@ -56,5 +56,19 @@ namespace ProjetoLogin3D2.BLL
             }
         }
 
+        // Metodo para Consultar os dados do Cliente
+        public DataTable ListarClientes(string email)
+        {
+            string sql = string.Format($@"select * from tbl_cliente where email_cliente = '{email}';");
+            return daoBanco.executarConsulta(sql);
+        }
+
+        public DataTable ListarClientes()
+        {
+            string sql = string.Format($@"select * from tbl_cliente");
+            return daoBanco.executarConsulta(sql);
+        }
+
+
     }
 }
