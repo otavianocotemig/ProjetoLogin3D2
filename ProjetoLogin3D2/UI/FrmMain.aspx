@@ -20,7 +20,7 @@
             <div class="jumbotron">
 
                  <asp:Button ID="btnMeuPerfil" class="btn btn-primary btn-lg" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" />
-                 <asp:Button ID="btnAdministracao" class="btn btn-primary btn-lg" runat="server" Text="Administracao" />
+                 <asp:Button ID="btnAdministracao" class="btn btn-primary btn-lg" runat="server" Text="Administracao" OnClick="btnAdministracao_Click" />
 
            </div>
         </div>

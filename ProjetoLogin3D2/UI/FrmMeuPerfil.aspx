@@ -25,6 +25,9 @@
              <asp:Label ID="lblSobrenome" runat="server" Text="SobreNome "></asp:Label>
              <asp:TextBox ID="txtSobrenome" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
 
+             <asp:Label ID="Label2" runat="server" Text="CPF "></asp:Label>
+             <asp:TextBox ID="txtCpf" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+
              <asp:Label ID="Label1" runat="server" Text="Senha Atual"></asp:Label>
              <asp:TextBox ID="txtSenhaAtual" type="password" runat="server" CssClass="form-control" ></asp:TextBox>
 

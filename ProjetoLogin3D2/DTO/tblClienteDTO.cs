@@ -12,7 +12,7 @@ namespace ProjetoLogin3D2.DTO
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
         public int Tp_usuario { get => tp_usuario; set => tp_usuario = value; }
-        public string Cpf_cliente { get => cpf_cliente; set => cpf_cliente = value; }
+       
 
         public string Nome_cliente
         {
@@ -83,6 +83,23 @@ namespace ProjetoLogin3D2.DTO
 
             }
             get { return this.senha_cliente; }
+
+        }
+        public string Cpf_cliente
+        {
+            set
+            {
+                if (value != string.Empty)
+                {
+                    this.cpf_cliente = value;
+                }
+                else
+                {
+                    throw new Exception("O campo CPF é obrigatório");
+                }
+
+            }
+            get { return this.cpf_cliente; }
 
         }
     }
