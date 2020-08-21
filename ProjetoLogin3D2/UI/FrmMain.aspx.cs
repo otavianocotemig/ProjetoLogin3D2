@@ -28,5 +28,10 @@ namespace ProjetoLogin3D2.UI
         {
             Response.Redirect("/UI/FrmPesquisaClientes.aspx");
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/UI/FrmPesquisaFornecedores.aspx");
+        }
     }
 }

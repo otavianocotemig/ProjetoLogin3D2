@@ -44,8 +44,8 @@ namespace ProjetoLogin3D2.DTO
                 {
                     throw new Exception("O campo SobreNome é obrigatório");
                 }
-
-            }
+                
+            }                           
             get { return this.sobrenome_cliente; }
 
         }

@@ -11,7 +11,7 @@ namespace ProjetoLogin3D2.UI
 {
 
 
-    public partial class FrmPesquisaClientes
+    public partial class FrmPesquisaFornecedores
     {
 
         /// <summary>
@@ -51,12 +51,12 @@ namespace ProjetoLogin3D2.UI
         protected global::System.Web.UI.WebControls.Button btnRetornar;
 
         /// <summary>
-        /// Controle GridClientes.
+        /// Controle GridFornecedor.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridClientes;
+        protected global::System.Web.UI.WebControls.GridView GridFornecedor;
     }
 }

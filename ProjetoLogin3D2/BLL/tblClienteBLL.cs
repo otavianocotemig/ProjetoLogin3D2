@@ -21,7 +21,7 @@ namespace ProjetoLogin3D2.BLL
             {
                 return true;
             }
-            else
+            else 
             {
                 return false;
             }
@@ -76,7 +76,12 @@ namespace ProjetoLogin3D2.BLL
             daoBanco.executarComando(sql);
 
         }
-
-
+        // Metodo para Pesquisar Clientes no banco de dados de acordo com a condicao
+        
+        public DataTable PesquisarClientes(string clausula)
+        {
+            string sql = string.Format($@"select id_cliente as Codigo, nome_cliente as Nome, sobrenome_cliente as Sobrenome, email_cliente as Email, cpf_cliente as CPF from tbl_cliente where "+clausula);
+            return daoBanco.executarConsulta(sql);
+        }
     }
 }

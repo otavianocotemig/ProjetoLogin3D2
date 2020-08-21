@@ -17,13 +17,38 @@ namespace ProjetoLogin3D2.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.GridClientes.DataSource = bllCliente.ListarClientes();
-            this.GridClientes.DataBind();
+            // Verificar se o usuario está logado
+            if (Session["usuario"] != null)
+            {
+                // Verifica administrador
+                if (Session["tipoUsuario"].ToString() == "1")
+                {
+                    Response.Redirect("FrmMain.aspx");
+                }
+              
+            }
+            else
+            {
+                Response.Redirect("signin.aspx");
+            }
+            
         }
 
-        protected void btnRetornar_Click(object sender, EventArgs e)
+        protected void btnRetornar_Click1(object sender, EventArgs e)
         {
             Response.Redirect("FrmMain.aspx");
+        }
+
+        protected void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            string condicao = "nome_cliente like  '%" + txtPesquisa.Text + "%'" +
+                              "or sobrenome_cliente like '%" + txtPesquisa.Text + "%'" +
+                              "or email_cliente like '%" + txtPesquisa.Text + "%'";
+
+
+
+            GridClientes.DataSource = bllCliente.PesquisarClientes(condicao);
+            GridClientes.DataBind();
         }
     }
 }
