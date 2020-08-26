@@ -13,7 +13,7 @@ namespace ProjetoLogin3D2.UI
         {
             this.emailUsuario.Text = Session["usuario"].ToString();
             // verificando se usuário é administrador
-            if (Session["tipoUsuario"].ToString() == "1")
+            if (Session["tipoUsuario"].ToString() == "2")
             {
                 this.btnAdministracao.Visible = false;
             }
@@ -32,6 +32,11 @@ namespace ProjetoLogin3D2.UI
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.Redirect("/UI/FrmPesquisaFornecedores.aspx");
+        }
+
+        protected void btnClientes_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/UI/FrmClientes.aspx");
         }
     }
 }

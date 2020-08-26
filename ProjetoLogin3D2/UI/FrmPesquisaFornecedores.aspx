@@ -17,7 +17,7 @@
             <p>
                 <asp:TextBox ID="txtPesquisa" runat="server" Width="370px"></asp:TextBox>
                 <asp:Button ID="btnPesquisar"   class="btn btn-lg btn-primary" runat="server" Text="Pesquisar" OnClick="btnPesquisar_Click" />
-                <asp:Button ID="btnRetornar"  class="btn btn-lg btn-primary"  runat="server" Text="Retornar"  />
+                <asp:Button ID="btnRetornar"  class="btn btn-lg btn-primary"  runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
             </p>
 
             <asp:GridView ID="GridFornecedor"  runat="server">

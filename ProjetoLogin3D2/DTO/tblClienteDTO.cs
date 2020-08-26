@@ -11,7 +11,22 @@ namespace ProjetoLogin3D2.DTO
         private string nome_cliente, sobrenome_cliente, cpf_cliente, senha_cliente, email_cliente;
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
-        public int Tp_usuario { get => tp_usuario; set => tp_usuario = value; }
+
+        public int Tp_usuario { 
+            set
+            {
+                if (value != 0)
+                {
+                    this.tp_usuario = value;
+                }
+                else
+                {
+                    this.tp_usuario = 2;
+                }
+            }
+
+            get { return this.tp_usuario; }
+        }
        
 
         public string Nome_cliente

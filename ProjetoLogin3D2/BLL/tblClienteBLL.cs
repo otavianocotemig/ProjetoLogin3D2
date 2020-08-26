@@ -83,5 +83,17 @@ namespace ProjetoLogin3D2.BLL
             string sql = string.Format($@"select id_cliente as Codigo, nome_cliente as Nome, sobrenome_cliente as Sobrenome, email_cliente as Email, cpf_cliente as CPF from tbl_cliente where "+clausula);
             return daoBanco.executarConsulta(sql);
         }
+        // Metodo para Inserir Clientes
+        public void InserirCliente(tblClienteDTO dtoCliente)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_cliente VALUES (NULL,'{dtoCliente.Nome_cliente}',
+                                                                               '{dtoCliente.Sobrenome_cliente}',   
+                                                                               '{dtoCliente.Email_cliente}',
+                                                                               '{dtoCliente.Senha_cliente}',
+                                                                               '{dtoCliente.Cpf_cliente}',
+                                                                               '{dtoCliente.Tp_usuario}');");
+            daoBanco.executarComando(sql);
+
+        }
     }
 }

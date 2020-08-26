@@ -73,5 +73,10 @@ namespace ProjetoLogin3D2
                 msgerro.Text = ex.Message;
             }
         }
+
+        protected void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/UI/FrmClientes.aspx");
+        }
     }
 }

@@ -21,7 +21,7 @@ namespace ProjetoLogin3D2.UI
             if (Session["usuario"] != null)
             {
                 // Verifica administrador
-                if (Session["tipoUsuario"].ToString() == "1")
+                if (Session["tipoUsuario"].ToString() == "2")
                 {
                     Response.Redirect("FrmMain.aspx");
                 }

@@ -25,7 +25,7 @@ namespace ProjetoLogin3D2.BLL
         }
         public DataTable PesquisarCliente(string nome)
         {
-            string consulta = string.Format($@"select * from tbl_fornecedor where nome like '%{nome}%';");//JOIA SEM ERROS vai na Fé
+            string consulta = string.Format($@"select * from tbl_fornecedor where nome like '%{nome}%';");
             DataTable dt = daoBanco.executarConsulta(consulta);
             return dt;
             //tbl_fornecedor só tem id, nome, email e telefone

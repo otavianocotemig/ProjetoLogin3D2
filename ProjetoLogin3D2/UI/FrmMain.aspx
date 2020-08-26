@@ -20,8 +20,9 @@
             <div class="jumbotron">
 
                  <asp:Button ID="btnMeuPerfil" class="btn btn-primary btn-lg" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" />
-                 <asp:Button ID="btnAdministracao" class="btn btn-primary btn-lg" runat="server" Text="Administracao" OnClick="btnAdministracao_Click" />
-                   <asp:Button ID="Button1" class="btn btn-primary btn-lg" runat="server" Text="Fornecedor" OnClick="Button1_Click"  />
+                 <asp:Button ID="btnAdministracao" class="btn btn-primary btn-lg" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" />
+                <asp:Button ID="Button1" class="btn btn-primary btn-lg" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  />
+                <asp:Button ID="btnClientes" class="btn btn-primary btn-lg" runat="server" Text="Clientes" OnClick="btnClientes_Click" />
 
            </div>
         </div>

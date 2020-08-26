@@ -27,7 +27,12 @@ namespace ProjetoLogin3D2.UI
 
             this.GridFornecedor.DataSource = bllFornecedor.PesquisarCliente(txtPesquisa.Text);
             this.GridFornecedor.DataBind();
-            //Response.Redirect("FrmMain.aspx");
+           
+        }
+
+        protected void btnRetornar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmMain.aspx");
         }
     }
 }

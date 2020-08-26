@@ -28,7 +28,7 @@
             <br />
             <asp:Button ID="btnSignin" class="btn btn-lg btn-primary btn-block" runat="server" Text="Login" OnClick="btnSignin_Click" />
             <br />
-            <asp:LinkButton ID="btnCadastrar" class="btn btn-link"  runat="server">Não sou Cadastrado. Clique aqui</asp:LinkButton>
+            <asp:LinkButton ID="btnCadastrar" class="btn btn-link"  runat="server" OnClick="btnCadastrar_Click">Não sou Cadastrado. Clique aqui</asp:LinkButton>
             <asp:LinkButton ID="btnEsqueciSenha" class="btn btn-link"  runat="server" OnClick="btnEsqueciSenha_Click">Esqueci Minha Senha.</asp:LinkButton>
         </div>
       <p class="mt-5 mb-3 text-muted">
