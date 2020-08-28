@@ -17,8 +17,7 @@
 
             <br />
             <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
-            <br />
-        
+                <br />
              <asp:Label ID="lblNome" runat="server" Text="Nome "></asp:Label>
              <asp:TextBox ID="txtNome" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
 
@@ -37,9 +36,16 @@
               <asp:Label ID="Label4" runat="server" Text="Tipo do Usuário"></asp:Label>
               <asp:DropDownList ID="drpTipoUsuario" runat="server" CssClass="form-control"></asp:DropDownList>
   
-            <br />
-            <asp:Button ID="btnInserir" class="btn btn-lg btn-primary btn-block" runat="server" Text="Gravar" OnClick="btnInserir_Click"  />
-            <asp:Button ID="btnRetornar" class="btn btn-lg btn-primary btn-block" runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
+           
+            <asp:Button ID="btnInserir" class="btn btn-lg btn-primary" runat="server" Text="Gravar" OnClick="btnInserir_Click"  />
+            <asp:Button ID="btnRetornar" class="btn btn-lg btn-primary" runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
+       <br />
+                <asp:GridView ID="GridClientes"  CssClass="table table-striped" runat="server" OnRowDeleting="GridClientes_RowDeleting" OnRowCancelingEdit="GridClientes_RowCancelingEdit" OnRowEditing="GridClientes_RowEditing" OnRowUpdating="GridClientes_RowUpdating">
+                    <Columns>
+                        <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
+                        <asp:CommandField ButtonType="Button" ShowEditButton="True" UpdateText="Gravar" />
+                    </Columns>
+                </asp:GridView>
       
         </div>
   
