@@ -11,7 +11,7 @@ namespace ProjetoLogin3D2.UI
 {
 
 
-    public partial class FrmMain
+    public partial class FrmProdutos
     {
 
         /// <summary>
@@ -24,57 +24,57 @@ namespace ProjetoLogin3D2.UI
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Controle emailUsuario.
+        /// Controle txtPesquisa.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label emailUsuario;
+        protected global::System.Web.UI.WebControls.TextBox txtPesquisa;
 
         /// <summary>
-        /// Controle btnMeuPerfil.
+        /// Controle btnPesquisar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnMeuPerfil;
+        protected global::System.Web.UI.WebControls.Button btnPesquisar;
 
         /// <summary>
-        /// Controle btnAdministracao.
+        /// Controle btnNovo.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAdministracao;
+        protected global::System.Web.UI.WebControls.Button btnNovo;
 
         /// <summary>
-        /// Controle Button1.
+        /// Controle btnRetornar.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button1;
+        protected global::System.Web.UI.WebControls.Button btnRetornar;
 
         /// <summary>
-        /// Controle btnClientes.
+        /// Controle GridProdutos.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnClientes;
+        protected global::System.Web.UI.WebControls.GridView GridProdutos;
 
         /// <summary>
-        /// Controle BtnProdutos.
+        /// Controle msgerro.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button BtnProdutos;
+        protected global::System.Web.UI.WebControls.Label msgerro;
     }
 }

@@ -130,5 +130,11 @@ namespace ProjetoLogin3D2.UI
             GridClientes.EditIndex = -1;
             this.ExibirGridClientes();
         }
+
+        protected void GridClientes_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridClientes.PageIndex = e.NewPageIndex;
+            this.ExibirGridClientes();
+        }
     }
 }

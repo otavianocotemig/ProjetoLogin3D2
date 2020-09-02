@@ -9,15 +9,14 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" />
     <link href="../Content/signin.css" rel="stylesheet" />
 </head>
-<body>
+<body class="align-content-center">
     <form id="form1" runat="server">
             <div class="jumbotron">
            
            <h1 class="h3 mb-3 font-weight-normal">Clientes</h1>
 
-            <br />
-            <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
-                <br />
+             <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
+              <br />
              <asp:Label ID="lblNome" runat="server" Text="Nome "></asp:Label>
              <asp:TextBox ID="txtNome" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
 
@@ -40,11 +39,12 @@
             <asp:Button ID="btnInserir" class="btn btn-lg btn-primary" runat="server" Text="Gravar" OnClick="btnInserir_Click"  />
             <asp:Button ID="btnRetornar" class="btn btn-lg btn-primary" runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
        <br />
-                <asp:GridView ID="GridClientes"  CssClass="table table-striped" runat="server" OnRowDeleting="GridClientes_RowDeleting" OnRowCancelingEdit="GridClientes_RowCancelingEdit" OnRowEditing="GridClientes_RowEditing" OnRowUpdating="GridClientes_RowUpdating">
+                <asp:GridView ID="GridClientes"  CssClass="table-responsive-sm" runat="server" OnRowDeleting="GridClientes_RowDeleting" OnRowCancelingEdit="GridClientes_RowCancelingEdit" OnRowEditing="GridClientes_RowEditing" OnRowUpdating="GridClientes_RowUpdating" AllowPaging="True" OnPageIndexChanging="GridClientes_PageIndexChanging" PageSize="5">
                     <Columns>
                         <asp:CommandField ShowDeleteButton="True" ButtonType="Button" />
                         <asp:CommandField ButtonType="Button" ShowEditButton="True" UpdateText="Gravar" />
                     </Columns>
+                    <PagerSettings Position="TopAndBottom" />
                 </asp:GridView>
       
         </div>

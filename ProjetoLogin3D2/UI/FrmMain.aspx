@@ -23,6 +23,7 @@
                  <asp:Button ID="btnAdministracao" class="btn btn-primary btn-lg" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" />
                 <asp:Button ID="Button1" class="btn btn-primary btn-lg" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  />
                 <asp:Button ID="btnClientes" class="btn btn-primary btn-lg" runat="server" Text="Clientes" OnClick="btnClientes_Click" />
+                <asp:Button ID="BtnProdutos" class="btn btn-primary btn-lg" runat="server" Text="Produtos" OnClick="BtnProdutos_Click" />
 
            </div>
         </div>
