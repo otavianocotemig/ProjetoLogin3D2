@@ -10,14 +10,7 @@ namespace ProjetoLogin3D2.BLL
         public Boolean UsuarioLogado()
         {
             // Verificar se usuário está logado
-            if (HttpSessionStateBase["usuario"] == null)
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return true;
         }
     }
 }
