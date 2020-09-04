@@ -14,11 +14,14 @@ namespace ProjetoLogin3D2.UI
         //Instancia do meu DTO e BLL
         tblProdutoBLL bllProduto = new tblProdutoBLL();
         tblProdutoDTO dtoProduto = new tblProdutoDTO();
-
-
+        
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            // Verificar se usuário está logado
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("signin.aspx");
+            }
         }
 
         protected void btnRetornar_Click(object sender, EventArgs e)
@@ -28,16 +31,42 @@ namespace ProjetoLogin3D2.UI
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
-            try { 
-                string condicao = "nomeproduto like '%" + txtPesquisa.Text + "%'";
-                GridProdutos.DataSource = bllProduto.PesquisarProdutos(condicao);
-                GridProdutos.DataBind();
+            try {
+                this.ExibirGridProdutos();
             }
             catch (Exception ex)
             {
                 msgerro.Visible = true;
                 msgerro.Text = ex.Message;
             }
+        }
+
+        protected void GridProdutos_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            try
+            {
+                dtoProduto.Id = Convert.ToInt32(e.Values[0]);
+                bllProduto.ExcluirProdutos(dtoProduto);
+                this.ExibirGridProdutos();
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
+        }
+        // Metodo Utilizado para ExibirDados do Grid
+        public void ExibirGridProdutos()
+        {
+            string condicao = "nomeproduto like '%" + txtPesquisa.Text + "%'";
+            GridProdutos.DataSource = bllProduto.PesquisarProdutos(condicao);
+            GridProdutos.DataBind();
+        }
+
+        protected void GridProdutos_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            GridProdutos.PageIndex = e.NewPageIndex;
+            this.ExibirGridProdutos();
         }
     }
 }

@@ -18,12 +18,17 @@ namespace ProjetoLogin3D2.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["usuario"] == null)
+            {
+                Response.Redirect("signin.aspx");
+            }
+
             if (IsPostBack == false)
             {
                 this.PreencheTipoUsuario();
                 this.ExibirGridClientes();
             }
-           
+          
         }
 
         public void PreencheTipoUsuario()
