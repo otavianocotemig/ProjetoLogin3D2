@@ -23,5 +23,20 @@ namespace ProjetoLogin3D2.BLL
             string sql = string.Format($@"DELETE FROM tbl_produto where id = {dtoProduto.Id};");
             daoBanco.executarComando(sql);
         }
+        //Metodo Utilizado para Incluir
+        public void InserirProduto(tblProdutoDTO dtoProduto)
+        {
+            string sql = string.Format($@"INSERT INTO tbl_produto VALUES (NULL,'{dtoProduto.NomeProduto}',
+                                                                               '{dtoProduto.Descricao}',   
+                                                                               '{dtoProduto.Preco}',
+                                                                               '{dtoProduto.Quantidade}',
+                                                                               '{dtoProduto.Peso}',
+                                                                               '{dtoProduto.Tbl_categoria_id}',
+                                                                               '{dtoProduto.Tbl_fornecedor_id}');");
+
+            daoBanco.executarComando(sql);
+
+        }
+
     }
 }

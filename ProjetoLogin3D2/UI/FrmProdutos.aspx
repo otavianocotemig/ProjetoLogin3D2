@@ -8,7 +8,7 @@
     <title>Manutenção de Produtos</title>
      <link href="../Content/bootstrap.css" rel="stylesheet" />
      <link href="../Content/signin.css" rel="stylesheet" />
-
+ 
 </head>
 <body>
     <form id="form1" runat="server">
@@ -19,7 +19,7 @@
             <p>
                 <asp:TextBox ID="txtPesquisa" runat="server" Width="370px"></asp:TextBox>
                 <asp:Button ID="btnPesquisar"   class="btn btn-lg btn-primary" runat="server" Text="Pesquisar" OnClick="btnPesquisar_Click" />
-                <asp:Button ID="btnNovo"  class="btn btn-lg btn-primary"  runat="server" Text="Novo Produto"  />
+                <asp:Button ID="btnNovo"  class="btn btn-lg btn-primary"  runat="server" Text="Novo Produto" OnClick="btnNovo_Click"  />
                 <asp:Button ID="btnRetornar"  class="btn btn-lg btn-primary"  runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
             </p>
             <asp:GridView ID="GridProdutos" CssClass="table-responsive-sm" runat="server" AllowPaging="True" OnPageIndexChanging="GridProdutos_PageIndexChanging" OnRowDeleting="GridProdutos_RowDeleting" PageSize="5">

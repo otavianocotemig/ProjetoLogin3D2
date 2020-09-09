@@ -13,7 +13,7 @@ namespace ProjetoLogin3D2.BLL
         //instanciando classe DAL
         private DALMysql daoBanco = new DALMysql();
 
-        public DataTable ListarClientes()
+        public DataTable ListarFornecedor()
         {
             //criando string de conexão
             string consulta = string.Format($@"select * from tbl_fornecedor;");
@@ -23,7 +23,7 @@ namespace ProjetoLogin3D2.BLL
             return dt;
                         
         }
-        public DataTable PesquisarCliente(string nome)
+        public DataTable ListarFornecedor(string nome)
         {
             string consulta = string.Format($@"select * from tbl_fornecedor where nome like '%{nome}%';");
             DataTable dt = daoBanco.executarConsulta(consulta);

@@ -68,5 +68,10 @@ namespace ProjetoLogin3D2.UI
             GridProdutos.PageIndex = e.NewPageIndex;
             this.ExibirGridProdutos();
         }
+
+        protected void btnNovo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("/UI/FrmManProdutos.aspx");
+        }
     }
 }

@@ -18,14 +18,14 @@ namespace ProjetoLogin3D2.UI
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            this.GridFornecedor.DataSource = bllFornecedor.ListarClientes();
+            this.GridFornecedor.DataSource = bllFornecedor.ListarFornecedor();
             this.GridFornecedor.DataBind();
         }
 
         protected void btnPesquisar_Click(object sender, EventArgs e)
         {
 
-            this.GridFornecedor.DataSource = bllFornecedor.PesquisarCliente(txtPesquisa.Text);
+            this.GridFornecedor.DataSource = bllFornecedor.ListarFornecedor(txtPesquisa.Text);
             this.GridFornecedor.DataBind();
            
         }
