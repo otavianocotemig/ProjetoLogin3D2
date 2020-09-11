@@ -2,6 +2,7 @@
 using ProjetoLogin3D2.DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -25,8 +26,24 @@ namespace ProjetoLogin3D2.UI
                 Response.Redirect("signin.aspx");
             }
 
+
+
             if (IsPostBack == false)
             {
+                if (Request.QueryString["id"] != null)
+                {
+                    int id = int.Parse(Request.QueryString["id"]);
+                    DataTable dt = produtoBLL.ConsultarProdutos(id);
+                    if (dt.Rows.Count > 0)
+                    {
+                        txtId.Text = dt.Rows[0][0].ToString();
+                        txtNomeProduto.Text = dt.Rows[0][1].ToString();
+                    }
+
+
+                }
+
+
                 this.PreencheCategoria();
                 this.PreencheFornecedor();
             }
@@ -73,6 +90,11 @@ namespace ProjetoLogin3D2.UI
                 msgerro.Visible = true;
                 msgerro.Text = ex.Message;
             }
+        }
+
+        protected void btnRetornar_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("FrmProdutos.aspx");
         }
     }
 }

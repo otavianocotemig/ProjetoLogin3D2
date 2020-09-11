@@ -38,5 +38,12 @@ namespace ProjetoLogin3D2.BLL
 
         }
 
+        // Metodo para Consultar Produto Pelo ID
+
+        public DataTable ConsultarProdutos(int Id)
+        {
+            string consulta = string.Format($@"SELECT * from tbl_produto where id = "+ Id+";");
+            return daoBanco.executarConsulta(consulta);
+        }
     }
 }

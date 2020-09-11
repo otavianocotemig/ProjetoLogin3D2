@@ -44,7 +44,7 @@
 
            
             <asp:Button ID="btnGravar" class="btn btn-lg btn-primary" runat="server" Text="Gravar" OnClick="btnGravar_Click"  />
-            <asp:Button ID="btnRetornar" class="btn btn-lg btn-primary" runat="server" Text="Retornar"  />
+            <asp:Button ID="btnRetornar" class="btn btn-lg btn-primary" runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
        <br />
         </div>
     </form>

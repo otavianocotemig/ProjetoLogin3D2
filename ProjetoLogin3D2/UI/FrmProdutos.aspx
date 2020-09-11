@@ -24,8 +24,12 @@
             </p>
             <asp:GridView ID="GridProdutos" CssClass="table-responsive-sm" runat="server" AllowPaging="True" OnPageIndexChanging="GridProdutos_PageIndexChanging" OnRowDeleting="GridProdutos_RowDeleting" PageSize="5">
                 <Columns>
-                    <asp:CommandField ShowSelectButton="True" />
                     <asp:CommandField ShowDeleteButton="True" />
+                    <asp:TemplateField>
+                        <ItemTemplate>
+                            <a href='FrmManProdutos.aspx?id=<%# Eval("id") %>'> Alterar </a>
+                        </ItemTemplate>
+                    </asp:TemplateField>
                 </Columns>
                 <PagerSettings PageButtonCount="5" Position="TopAndBottom" />
             </asp:GridView>
