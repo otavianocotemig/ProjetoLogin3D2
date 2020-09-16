@@ -38,9 +38,19 @@ namespace ProjetoLogin3D2.UI
                     {
                         txtId.Text = dt.Rows[0][0].ToString();
                         txtNomeProduto.Text = dt.Rows[0][1].ToString();
+                        txtDescricao.Text = dt.Rows[0][2].ToString();
+                        txtPreco.Text = dt.Rows[0][3].ToString();
+                        txtQuantidade.Text = dt.Rows[0][4].ToString();
+                        txtPeso.Text = dt.Rows[0][5].ToString();
+                        drpCategoria.SelectedValue = dt.Rows[0][6].ToString();
+                        drpFornecedor.SelectedValue = dt.Rows[0][7].ToString();
                     }
+                    this.btnGravar.Text = "Alterar";
 
-
+                }
+                else
+                {
+                    this.btnGravar.Text = "Inserir";
                 }
 
 
@@ -81,8 +91,16 @@ namespace ProjetoLogin3D2.UI
                 produtoDTO.Tbl_categoria_id = int.Parse(drpCategoria.SelectedValue.ToString());
                 produtoDTO.Tbl_fornecedor_id = int.Parse(drpFornecedor.SelectedValue.ToString());
 
-                // Inserir na tabela de clientes
-                produtoBLL.InserirProduto(produtoDTO);
+                if (btnGravar.Text == "Alterar"){
+                    produtoDTO.Id = int.Parse(txtId.Text);
+                    produtoBLL.AlterarProduto(produtoDTO);
+
+                }else
+                {
+                    // Inserir na tabela de clientes
+                    produtoBLL.InserirProduto(produtoDTO);
+                }
+
                 Response.Redirect("/UI/FrmProdutos.aspx");
             }
             catch (Exception ex)

@@ -39,11 +39,26 @@ namespace ProjetoLogin3D2.BLL
         }
 
         // Metodo para Consultar Produto Pelo ID
-
         public DataTable ConsultarProdutos(int Id)
         {
             string consulta = string.Format($@"SELECT * from tbl_produto where id = "+ Id+";");
             return daoBanco.executarConsulta(consulta);
         }
+
+        // Metodo utilizado para Update na tabela Produtos
+        public void AlterarProduto(tblProdutoDTO dtoProduto)
+        {
+            string sql = string.Format($@"UPDATE tbl_produto set nomeProduto = '{dtoProduto.NomeProduto}',
+                                                                 descricao = '{dtoProduto.Descricao}',
+                                                                 preco = '{dtoProduto.Preco}',
+                                                                 peso = '{dtoProduto.Peso}',
+                                                                 quantidade = '{dtoProduto.Quantidade}',
+                                                                 tbl_categoria_id = '{dtoProduto.Tbl_categoria_id}',
+                                                                 tbl_fornecedor_id  = '{dtoProduto.Tbl_fornecedor_id}'
+                                                where id = '{dtoProduto.Id}';");
+            daoBanco.executarComando(sql);
+
+        }
+
     }
 }

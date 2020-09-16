@@ -76,7 +76,7 @@ namespace ProjetoLogin3D2
 
         protected void btnCadastrar_Click(object sender, EventArgs e)
         {
-            Response.Redirect("/UI/FrmClientes.aspx");
+            Response.Redirect("/UI/FrmCadClientes.aspx");
         }
     }
 }
