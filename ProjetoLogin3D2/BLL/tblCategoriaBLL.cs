@@ -13,7 +13,7 @@ namespace ProjetoLogin3D2.BLL
 
         public DataTable ListarCategoria()
         {
-            string sql = string.Format($@"select * from tbl_Categoria");
+            string sql = string.Format($@"select * from tbl_categoria");
             return daoBanco.executarConsulta(sql);
         }
 
