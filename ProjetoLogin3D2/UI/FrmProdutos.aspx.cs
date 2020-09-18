@@ -58,7 +58,16 @@ namespace ProjetoLogin3D2.UI
         // Metodo Utilizado para ExibirDados do Grid
         public void ExibirGridProdutos()
         {
-            string condicao = "nomeproduto like '%" + txtPesquisa.Text + "%'";
+            string condicao = "";
+            if (OrdenarNome.Checked == true)
+            {
+                condicao = "nomeproduto like '%" + txtPesquisa.Text + "%' order by nomeproduto";
+            }
+            else
+            {
+                condicao = "nomeproduto like '%" + txtPesquisa.Text + "%' order by id";
+            }
+            
             GridProdutos.DataSource = bllProduto.PesquisarProdutos(condicao);
             GridProdutos.DataBind();
         }

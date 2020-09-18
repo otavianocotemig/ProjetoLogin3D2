@@ -43,5 +43,13 @@ namespace ProjetoLogin3D2.UI
         {
             Response.Redirect("/UI/FrmProdutos.aspx");
         }
+
+        protected void BtnSair_Click(object sender, EventArgs e)
+        {
+            Session["usuario"] = "";
+            Session["tipoUsuario"] = "";
+
+          Response.Redirect("/UI/signIn.aspx");
+        }
     }
 }

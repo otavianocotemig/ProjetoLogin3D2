@@ -21,10 +21,10 @@
 
             <asp:Label ID="lblEmail" runat="server" Text="Email "></asp:Label>
             
-            <asp:TextBox ID="txtEmail" type="email" runat="server" CssClass="form-control" ></asp:TextBox>
+            <asp:TextBox ID="txtEmail" type="email" required="true" runat="server" CssClass="form-control" ></asp:TextBox>
             <br />
             <asp:Label ID="lblSenha" runat="server" Text="Senha "></asp:Label>
-            <asp:TextBox ID="txtSenha" type="password" runat="server" CssClass="form-control"></asp:TextBox>
+            <asp:TextBox ID="txtSenha" type="password" required="true" runat="server" CssClass="form-control"></asp:TextBox>
             <br />
             <asp:Button ID="btnSignin" class="btn btn-lg btn-primary btn-block" runat="server" Text="Login" OnClick="btnSignin_Click" />
             <br />

@@ -17,13 +17,14 @@
               <asp:Label ID="emailUsuario" runat="server" ForeColor="black" Text="." Visible="true"></asp:Label>
             <br />
 
-            <div class="jumbotron">
-
-                 <asp:Button ID="btnMeuPerfil" class="btn btn-primary btn-lg" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" />
-                 <asp:Button ID="btnAdministracao" class="btn btn-primary btn-lg" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" />
-                <asp:Button ID="Button1" class="btn btn-primary btn-lg" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  />
-                <asp:Button ID="btnClientes" class="btn btn-primary btn-lg" runat="server" Text="Clientes" OnClick="btnClientes_Click" />
-                <asp:Button ID="BtnProdutos" class="btn btn-primary btn-lg" runat="server" Text="Produtos" OnClick="BtnProdutos_Click" />
+            <div class="justify-content-end">
+                
+                <p> <asp:Button ID="btnMeuPerfil" class="btn btn-link" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" /></p>
+                <p><asp:Button ID="btnAdministracao" class="btn btn-link" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" /></p>
+                <p><asp:Button ID="Button1" class="btn btn-link" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  /></p>
+                <p><asp:Button ID="btnClientes" class="btn btn-link" runat="server" Text="Clientes" OnClick="btnClientes_Click" /></p>
+                <p><asp:Button ID="BtnProdutos" class="btn btn-link" runat="server" Text="Produtos" OnClick="BtnProdutos_Click" /></p>
+                <p><asp:Button ID="BtnSair" class="btn btn-link" runat="server" Text="Sair" OnClick="BtnSair_Click" /></p>
 
            </div>
         </div>

@@ -21,8 +21,11 @@
                 <asp:Button ID="btnPesquisar"   class="btn btn-lg btn-primary" runat="server" Text="Pesquisar" OnClick="btnPesquisar_Click" />
                 <asp:Button ID="btnNovo"  class="btn btn-lg btn-primary"  runat="server" Text="Novo Produto" OnClick="btnNovo_Click"  />
                 <asp:Button ID="btnRetornar"  class="btn btn-lg btn-primary"  runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
+                </p>
+               <p>
+                   <asp:CheckBox ID="OrdenarNome" runat="server" Text="Ordenar pelo Nome"/>
             </p>
-            <asp:GridView ID="GridProdutos" CssClass="table-responsive-sm" runat="server" AllowPaging="True" OnPageIndexChanging="GridProdutos_PageIndexChanging" OnRowDeleting="GridProdutos_RowDeleting" PageSize="5">
+            <asp:GridView ID="GridProdutos" CssClass="table-responsive-sm" runat="server" AllowPaging="True" OnPageIndexChanging="GridProdutos_PageIndexChanging" OnRowDeleting="GridProdutos_RowDeleting" PageSize="15">
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" />
                     <asp:TemplateField>

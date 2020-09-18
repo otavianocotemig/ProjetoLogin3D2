@@ -18,19 +18,19 @@
              <asp:Label ID="msgerro" runat="server" ForeColor="Red" Text="." Visible="false"></asp:Label>
               <br />
              <asp:Label ID="lblNome" runat="server" Text="Nome "></asp:Label>
-             <asp:TextBox ID="txtNome" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+             <asp:TextBox ID="txtNome" type="text" required="true" runat="server" CssClass="form-control" ></asp:TextBox>
 
              <asp:Label ID="lblSobrenome" runat="server" Text="SobreNome "></asp:Label>
-             <asp:TextBox ID="txtSobrenome" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+             <asp:TextBox ID="txtSobrenome" type="text" required="true" runat="server" CssClass="form-control" ></asp:TextBox>
 
              <asp:Label ID="Label2" runat="server" Text="CPF "></asp:Label>
-             <asp:TextBox ID="txtCpf" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+             <asp:TextBox ID="txtCpf" type="text" required="true" placeholder="Informe somente números." runat="server" CssClass="form-control" ></asp:TextBox>
 
              <asp:Label ID="Label3" runat="server" Text="Email "></asp:Label>
-             <asp:TextBox ID="txtEmail" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+             <asp:TextBox ID="txtEmail" type="text" runat="server" CssClass="form-control" required="true"  ></asp:TextBox>
 
              <asp:Label ID="Label1" runat="server" Text="Senha"></asp:Label>
-             <asp:TextBox ID="txtSenhaAtual" type="password" runat="server" CssClass="form-control" ></asp:TextBox>
+             <asp:TextBox ID="txtSenhaAtual" type="password" required="true" runat="server" CssClass="form-control" ></asp:TextBox>
 
                      
             <asp:Button ID="btnInserir" class="btn btn-lg btn-primary" runat="server" Text="Gravar" OnClick="btnInserir_Click"   />
