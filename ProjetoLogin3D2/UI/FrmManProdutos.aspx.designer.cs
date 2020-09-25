@@ -177,6 +177,24 @@ namespace ProjetoLogin3D2.UI
         protected global::System.Web.UI.WebControls.DropDownList drpFornecedor;
 
         /// <summary>
+        /// Controle Label7.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+
+        /// <summary>
+        /// Controle FileUploadProduto.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.FileUpload FileUploadProduto;
+
+        /// <summary>
         /// Controle btnGravar.
         /// </summary>
         /// <remarks>

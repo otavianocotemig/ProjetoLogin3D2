@@ -33,6 +33,7 @@
                             <a href='FrmManProdutos.aspx?id=<%# Eval("id") %>'> Alterar </a>
                         </ItemTemplate>
                     </asp:TemplateField>
+                    
                 </Columns>
                 <PagerSettings PageButtonCount="5" Position="TopAndBottom" />
             </asp:GridView>

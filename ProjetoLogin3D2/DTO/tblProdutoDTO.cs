@@ -10,6 +10,7 @@ namespace ProjetoLogin3D2.DTO
         // Atributos
         private int id, quantidade, tbl_categoria_id, tbl_fornecedor_id;
         private String nomeProduto, descricao;
+        private String foto;
         private Double preco, peso;
         // Metodos
         public int Id { get => id; set => id = value; }
@@ -17,6 +18,7 @@ namespace ProjetoLogin3D2.DTO
         public int Tbl_fornecedor_id { get => tbl_fornecedor_id; set => tbl_fornecedor_id = value; }
         public double Preco { get => preco; set => preco = value; }
         public double Peso { get => peso; set => peso = value; }
+        public string Foto { get => foto; set => foto = value; }
 
         public string NomeProduto
         {
@@ -70,6 +72,7 @@ namespace ProjetoLogin3D2.DTO
             get { return this.tbl_categoria_id; }
 
         }
+
        
     }
 }

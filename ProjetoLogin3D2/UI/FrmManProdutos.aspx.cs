@@ -90,6 +90,7 @@ namespace ProjetoLogin3D2.UI
                 produtoDTO.Peso = double.Parse(txtPeso.Text);
                 produtoDTO.Tbl_categoria_id = int.Parse(drpCategoria.SelectedValue.ToString());
                 produtoDTO.Tbl_fornecedor_id = int.Parse(drpFornecedor.SelectedValue.ToString());
+                produtoDTO.Foto = FileUploadProduto.FileName.ToString();
 
                 if (btnGravar.Text == "Alterar"){
                     produtoDTO.Id = int.Parse(txtId.Text);
@@ -100,7 +101,17 @@ namespace ProjetoLogin3D2.UI
                     // Inserir na tabela de clientes
                     produtoBLL.InserirProduto(produtoDTO);
                 }
+                // Fazer o Upload da imagem para o Servidor
 
+                string extension = System.IO.Path.GetExtension(FileUploadProduto.FileName);
+
+                if (extension == "jpg")
+                {
+                    String localImagem = Server.MapPath("\\ImgProdutos\\" + FileUploadProduto.FileName);
+                    FileUploadProduto.SaveAs(localImagem);
+                }
+
+                //
                 Response.Redirect("/UI/FrmProdutos.aspx");
             }
             catch (Exception ex)

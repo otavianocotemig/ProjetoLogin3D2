@@ -32,7 +32,8 @@ namespace ProjetoLogin3D2.BLL
                                                                                '{dtoProduto.Quantidade}',
                                                                                '{dtoProduto.Peso}',
                                                                                '{dtoProduto.Tbl_categoria_id}',
-                                                                               '{dtoProduto.Tbl_fornecedor_id}');");
+                                                                               '{dtoProduto.Tbl_fornecedor_id}',
+                                                                               '{dtoProduto.Foto}');");
 
             daoBanco.executarComando(sql);
 
@@ -54,7 +55,8 @@ namespace ProjetoLogin3D2.BLL
                                                                  peso = '{dtoProduto.Peso}',
                                                                  quantidade = '{dtoProduto.Quantidade}',
                                                                  tbl_categoria_id = '{dtoProduto.Tbl_categoria_id}',
-                                                                 tbl_fornecedor_id  = '{dtoProduto.Tbl_fornecedor_id}'
+                                                                 tbl_fornecedor_id  = '{dtoProduto.Tbl_fornecedor_id}',
+                                                                 Foto  = '{dtoProduto.Foto}'
                                                 where id = '{dtoProduto.Id}';");
             daoBanco.executarComando(sql);
 

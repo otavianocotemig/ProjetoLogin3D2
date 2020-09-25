@@ -23,7 +23,7 @@ namespace ProjetoLogin3D2.UI
                 Response.Redirect("signin.aspx");
             }
 
-            if (IsPostBack == false)
+            if (!IsPostBack)
             {
                 this.PreencheTipoUsuario();
                 this.ExibirGridClientes();

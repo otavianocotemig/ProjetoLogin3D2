@@ -41,8 +41,13 @@
 
               <asp:Label ID="Label6" runat="server" Text="Fornecedor"></asp:Label>
               <asp:DropDownList ID="drpFornecedor" runat="server" CssClass="form-control"></asp:DropDownList>
+              <p>
+             
+                  <asp:Label ID="Label7" runat="server" Text="Foto do Produto"></asp:Label>
+                  <asp:FileUpload ID="FileUploadProduto" runat="server"  CssClass="form-control" />
+             
+           <br />
 
-           
             <asp:Button ID="btnGravar" class="btn btn-lg btn-primary" runat="server" Text="Gravar" OnClick="btnGravar_Click"  />
             <asp:Button ID="btnRetornar" class="btn btn-lg btn-primary" runat="server" Text="Retornar" OnClick="btnRetornar_Click"  />
        <br />
