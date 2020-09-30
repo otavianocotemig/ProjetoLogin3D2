@@ -2,6 +2,7 @@
 using ProjetoLogin3D2.DTO;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -47,6 +48,7 @@ namespace ProjetoLogin3D2.UI
             {
                 dtoProduto.Id = Convert.ToInt32(e.Values[0]);
                 bllProduto.ExcluirProdutos(dtoProduto);
+                
                 this.ExibirGridProdutos();
             }
             catch (Exception ex)

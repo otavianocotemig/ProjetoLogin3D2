@@ -186,13 +186,22 @@ namespace ProjetoLogin3D2.UI
         protected global::System.Web.UI.WebControls.Label Label7;
 
         /// <summary>
-        /// Controle FileUploadProduto.
+        /// Controle FotoProduto.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.FileUpload FileUploadProduto;
+        protected global::System.Web.UI.WebControls.FileUpload FotoProduto;
+
+        /// <summary>
+        /// Controle ImgProduto.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image ImgProduto;
 
         /// <summary>
         /// Controle btnGravar.

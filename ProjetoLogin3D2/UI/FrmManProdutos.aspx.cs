@@ -44,6 +44,8 @@ namespace ProjetoLogin3D2.UI
                         txtPeso.Text = dt.Rows[0][5].ToString();
                         drpCategoria.SelectedValue = dt.Rows[0][6].ToString();
                         drpFornecedor.SelectedValue = dt.Rows[0][7].ToString();
+                        ImgProduto.ImageUrl = "~//ImgProdutos//" + dt.Rows[0][8].ToString();
+
                     }
                     this.btnGravar.Text = "Alterar";
 
@@ -90,7 +92,7 @@ namespace ProjetoLogin3D2.UI
                 produtoDTO.Peso = double.Parse(txtPeso.Text);
                 produtoDTO.Tbl_categoria_id = int.Parse(drpCategoria.SelectedValue.ToString());
                 produtoDTO.Tbl_fornecedor_id = int.Parse(drpFornecedor.SelectedValue.ToString());
-                produtoDTO.Foto = FileUploadProduto.FileName.ToString();
+                produtoDTO.Foto = FotoProduto.FileName.ToString();
 
                 if (btnGravar.Text == "Alterar"){
                     produtoDTO.Id = int.Parse(txtId.Text);
@@ -103,14 +105,9 @@ namespace ProjetoLogin3D2.UI
                 }
                 // Fazer o Upload da imagem para o Servidor
 
-                string extension = System.IO.Path.GetExtension(FileUploadProduto.FileName);
-
-                if (extension == "jpg")
-                {
-                    String localImagem = Server.MapPath("\\ImgProdutos\\" + FileUploadProduto.FileName);
-                    FileUploadProduto.SaveAs(localImagem);
-                }
-
+               String localImagem = Server.MapPath("\\ImgProdutos\\" + FotoProduto.FileName);
+               FotoProduto.SaveAs(localImagem);
+             
                 //
                 Response.Redirect("/UI/FrmProdutos.aspx");
             }

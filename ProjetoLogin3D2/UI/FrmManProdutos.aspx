@@ -42,9 +42,12 @@
               <asp:Label ID="Label6" runat="server" Text="Fornecedor"></asp:Label>
               <asp:DropDownList ID="drpFornecedor" runat="server" CssClass="form-control"></asp:DropDownList>
               <p>
-             
                   <asp:Label ID="Label7" runat="server" Text="Foto do Produto"></asp:Label>
-                  <asp:FileUpload ID="FileUploadProduto" runat="server"  CssClass="form-control" />
+                  <asp:FileUpload ID="FotoProduto" runat="server"  CssClass="form-control" />
+             
+             
+                  <asp:Image ID="ImgProduto" runat="server" Height="120px" Width="183px" />
+             
              
            <br />
 
