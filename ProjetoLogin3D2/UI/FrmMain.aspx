@@ -10,24 +10,69 @@
      <link href="../Content/signin.css" rel="stylesheet" />
 </head>
 <body>
+
     <form id="form1" runat="server">
-        <div>
-             <img class="mb-4" src="../IMG/logocotemig.png" alt="" width="120" height="72">
-              <h1 class="h3 mb-3 font-weight-normal">Loja Virtual</h1>
-              <asp:Label ID="emailUsuario" runat="server" ForeColor="black" Text="." Visible="true"></asp:Label>
-            <br />
 
-            <div class="justify-content-end">
+ 
+          <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+            
+              <a class="navbar-brand" href="FrmMain.aspx">Loja Virtual</a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+
+              <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+                <ul class="navbar-nav mr-auto">
+                  
+                  <li class="nav-item">
+                    <a class="nav-link" href="FrmMeuPerfil.aspx">Meu Perfil</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="FrmProdutos.aspx">Produtos</a>
+                  </li>
+                      <li class="nav-item">
+                    <a class="nav-link" href="FrmClientes.aspx">Clientes</a>
+                  </li>
+                     <li>
+                      <li class="nav-item">
+                    <a class="nav-link" href="FrmPesquisaClientes.aspx">Consulta Clientes</a>
+                  </li>
+                     <li>
+                      <li class="nav-item">
+                    <a class="nav-link" href="FrmPesquisaFornecedores.aspx">Consulta Fornecedor</a>
+                  </li>
                 
-                <p> <asp:Button ID="btnMeuPerfil" class="btn btn-link" runat="server" Text="Meu Perfil" OnClick="btnMeuPerfil_Click" /></p>
-                <p><asp:Button ID="btnAdministracao" class="btn btn-link" runat="server" Text="Consulta Clientes" OnClick="btnAdministracao_Click" /></p>
-                <p><asp:Button ID="Button1" class="btn btn-link" runat="server" Text="Consulta Fornecedor" OnClick="Button1_Click"  /></p>
-                <p><asp:Button ID="btnClientes" class="btn btn-link" runat="server" Text="Clientes" OnClick="btnClientes_Click" /></p>
-                <p><asp:Button ID="BtnProdutos" class="btn btn-link" runat="server" Text="Produtos" OnClick="BtnProdutos_Click" /></p>
-                <p><asp:Button ID="BtnSair" class="btn btn-link" runat="server" Text="Sair" OnClick="BtnSair_Click" /></p>
+                </ul>
+              
+                   <asp:Label ID="emailUsuario" runat="server" ForeColor="white" Text="." Visible="true"></asp:Label>
+                  <br />
+                  <asp:Button ID="BtnSair" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Sair" OnClick="BtnSair_Click" />
+              
+              </div>
+            </nav>
 
+
+          <div>
+              <p>
+               <asp:TextBox ID="txtPesquisa" type="text" runat="server" ></asp:TextBox>
+               <asp:Button ID="btnPesquisa" class="btn btn-outline-success my-2 my-sm-0" runat="server" Text="Pesquisar" OnClick="btnPesquisa_Click"  />
+           </p>
            </div>
-        </div>
+        <br />
+           <asp:GridView ID="GridProdutos" CssClass="table table-dark" runat="server">
+                <Columns>
+                    
+                 
+                    <asp:TemplateField>
+                         <ItemTemplate>
+                            <asp:ImageButton ID="ImgBtn1" runat="server" ImageUrl='<%# "~//ImgProdutos//"+Eval("Foto")%>' Width="110px" Height="100px" Style="cursor: pointer" 
+           OnClientClick = "return LoadDiv(this.src);"/>
+                    </ItemTemplate>
+                    </asp:TemplateField>
+                 
+                </Columns>
+               
+            </asp:GridView>
     </form>
 </body>
 </html>

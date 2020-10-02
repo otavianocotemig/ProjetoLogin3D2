@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProjetoLogin3D2.BLL;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -9,14 +10,13 @@ namespace ProjetoLogin3D2.UI
 {
     public partial class FrmMain : System.Web.UI.Page
     {
+        tblProdutoBLL bllproduto = new tblProdutoBLL();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             this.emailUsuario.Text = Session["usuario"].ToString();
             // verificando se usuário é administrador
-            if (Session["tipoUsuario"].ToString() == "2")
-            {
-                this.btnAdministracao.Visible = false;
-            }
+           
         }
 
         protected void btnMeuPerfil_Click(object sender, EventArgs e)
@@ -50,6 +50,13 @@ namespace ProjetoLogin3D2.UI
             Session["tipoUsuario"] = "";
 
           Response.Redirect("/UI/signIn.aspx");
+        }
+
+        protected void btnPesquisa_Click(object sender, EventArgs e)
+        {
+            string condicao = "nomeproduto like '%" + txtPesquisa.Text + "%' order by nomeproduto";
+            GridProdutos.DataSource = bllproduto.PesquisarProdutos(condicao);
+            GridProdutos.DataBind();
         }
     }
 }
