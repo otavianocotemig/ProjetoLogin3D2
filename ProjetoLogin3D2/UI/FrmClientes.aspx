@@ -32,6 +32,19 @@
              <asp:Label ID="Label1" runat="server" Text="Senha"></asp:Label>
              <asp:TextBox ID="txtSenhaAtual" type="password" runat="server" CssClass="form-control" ></asp:TextBox>
 
+             <asp:Label ID="Label5" runat="server" Text="CEP "></asp:Label>
+             <asp:Button ID="btnConsultaCEP" class="btn btn-small btn-primary" runat="server" Text="Consultar CEP" OnClick="btnConsultaCEP_Click"   />
+             <asp:TextBox ID="txtCep" type="text" runat="server" CssClass="form-control"></asp:TextBox>
+
+             <asp:Label ID="Label6" runat="server" Text="Endereço "></asp:Label>
+             <asp:TextBox ID="txtEndereco" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+
+             <asp:Label ID="Label7" runat="server" Text="Bairro "></asp:Label>
+             <asp:TextBox ID="txtBairro" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+
+             <asp:Label ID="Label8" runat="server" Text="Cidade "></asp:Label>
+             <asp:TextBox ID="txtCidade" type="text" runat="server" CssClass="form-control" ></asp:TextBox>
+
               <asp:Label ID="Label4" runat="server" Text="Tipo do Usuário"></asp:Label>
               <asp:DropDownList ID="drpTipoUsuario" runat="server" CssClass="form-control"></asp:DropDownList>
   

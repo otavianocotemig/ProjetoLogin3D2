@@ -71,7 +71,11 @@ namespace ProjetoLogin3D2.BLL
             string sql = string.Format($@"UPDATE tbl_cliente set nome_cliente = '{dtoCliente.Nome_cliente}',
                                                                  sobrenome_cliente = '{dtoCliente.Sobrenome_cliente}',
                                                                  cpf_cliente = '{dtoCliente.Cpf_cliente}',
-                                                                 senha_cliente = '{dtoCliente.Senha_cliente}'
+                                                                 senha_cliente = '{dtoCliente.Senha_cliente}',
+                                                                 cep = '{dtoCliente.Cep}',
+                                                                 endereco = '{dtoCliente.Endereco}',
+                                                                 bairro = '{dtoCliente.Bairro}',
+                                                                 cidade = '{dtoCliente.Cidade}'
                                                 where email_cliente = '{dtoCliente.Email_cliente}';");
             daoBanco.executarComando(sql);
 
@@ -91,7 +95,11 @@ namespace ProjetoLogin3D2.BLL
                                                                                '{dtoCliente.Email_cliente}',
                                                                                '{dtoCliente.Senha_cliente}',
                                                                                '{dtoCliente.Cpf_cliente}',
-                                                                               '{dtoCliente.Tp_usuario}');");
+                                                                               '{dtoCliente.Tp_usuario}',
+                                                                               '{dtoCliente.Cep}',
+                                                                               '{dtoCliente.Endereco}',
+                                                                               '{dtoCliente.Bairro}',
+                                                                               '{dtoCliente.Cidade}');");
             daoBanco.executarComando(sql);
 
         }

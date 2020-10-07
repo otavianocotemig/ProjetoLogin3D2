@@ -56,6 +56,10 @@ namespace ProjetoLogin3D2.UI
                 dtoCliente.Cpf_cliente = txtCpf.Text;
                 dtoCliente.Senha_cliente = txtSenhaAtual.Text;
                 dtoCliente.Tp_usuario = int.Parse(drpTipoUsuario.SelectedValue.ToString());
+                dtoCliente.Cep = txtCep.Text;
+                dtoCliente.Endereco = txtEndereco.Text;
+                dtoCliente.Bairro = txtBairro.Text;
+                dtoCliente.Cidade = txtCidade.Text;
 
                 // Inserir na tabela de clientes
                 bllCliente.InserirCliente(dtoCliente);
@@ -140,6 +144,23 @@ namespace ProjetoLogin3D2.UI
         {
             GridClientes.PageIndex = e.NewPageIndex;
             this.ExibirGridClientes();
+        }
+
+        protected void btnConsultaCEP_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var wsApi = new APICorreios.AtendeClienteClient();
+                var retorno = wsApi.consultaCEP(txtCep.Text);
+                txtEndereco.Text = retorno.end;
+                txtBairro.Text = retorno.bairro;
+                txtCidade.Text = retorno.cidade;
+            }
+            catch (Exception ex)
+            {
+                msgerro.Visible = true;
+                msgerro.Text = ex.Message;
+            }
         }
     }
 }

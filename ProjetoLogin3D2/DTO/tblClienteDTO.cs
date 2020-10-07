@@ -9,8 +9,15 @@ namespace ProjetoLogin3D2.DTO
     {
         private int id_cliente, tp_usuario;
         private string nome_cliente, sobrenome_cliente, cpf_cliente, senha_cliente, email_cliente;
+        private string cep, endereco, bairro, cidade;
 
         public int Id_cliente { get => id_cliente; set => id_cliente = value; }
+
+        public string Cep { get => cep; set => cep = value; }
+        public string Endereco { get => endereco; set => endereco = value; }
+        public string Bairro { get => bairro; set => bairro = value; }
+        public string Cidade { get => cidade; set => cidade = value; }
+
 
         public int Tp_usuario { 
             set
@@ -117,5 +124,7 @@ namespace ProjetoLogin3D2.DTO
             get { return this.cpf_cliente; }
 
         }
+
+       
     }
 }

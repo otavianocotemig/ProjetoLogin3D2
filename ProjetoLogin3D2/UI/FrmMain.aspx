@@ -59,7 +59,7 @@
            </p>
            </div>
         <br />
-           <asp:GridView ID="GridProdutos" CssClass="table table-dark" runat="server">
+           <asp:GridView ID="GridProdutos" CssClass="table table-light" runat="server">
                 <Columns>
                     
                  
