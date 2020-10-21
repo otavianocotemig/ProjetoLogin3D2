@@ -150,11 +150,14 @@ namespace ProjetoLogin3D2.UI
         {
             try
             {
+                // Instanciando o Objeto para comunicação dos correios
                 var wsApi = new APICorreios.AtendeClienteClient();
-                var retorno = wsApi.consultaCEP(txtCep.Text);
-                txtEndereco.Text = retorno.end;
-                txtBairro.Text = retorno.bairro;
-                txtCidade.Text = retorno.cidade;
+
+
+                var retornoCEP = wsApi.consultaCEP(txtCep.Text);
+                txtEndereco.Text = retornoCEP.end;
+                txtBairro.Text = retornoCEP.bairro;
+                txtCidade.Text = retornoCEP.cidade;
             }
             catch (Exception ex)
             {

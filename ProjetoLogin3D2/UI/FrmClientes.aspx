@@ -33,7 +33,7 @@
              <asp:TextBox ID="txtSenhaAtual" type="password" runat="server" CssClass="form-control" ></asp:TextBox>
 
              <asp:Label ID="Label5" runat="server" Text="CEP "></asp:Label>
-             <asp:Button ID="btnConsultaCEP" class="btn btn-small btn-primary" runat="server" Text="Consultar CEP" OnClick="btnConsultaCEP_Click"   />
+             <asp:Button ID="btnConsultaCEP" class="btn btn-small btn-primary" runat="server" Text="Consultar CEP" OnClick="btnConsultaCEP_Click" Width="199px"   />
              <asp:TextBox ID="txtCep" type="text" runat="server" CssClass="form-control"></asp:TextBox>
 
              <asp:Label ID="Label6" runat="server" Text="Endereço "></asp:Label>

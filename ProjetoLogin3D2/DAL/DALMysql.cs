@@ -10,14 +10,14 @@ namespace ProjetoLogin3D2.DAL
     public class DALMysql
     {
         private MySqlConnection conexao;
-   // private string string_conexao = "Persist security info = false;" +
-   //                                     "server=localhost;" +
-   //                                     "database=dbmvc;" +
-   //                                     "user=root ; pwd=;";
-   private string string_conexao = "Persist security info = false;" +
-                                              "server=108.179.253.169;" +
-                                              "database=silin091_cotemig20201;" +
-                                              "user=silin091_cotemig ; pwd=cotemig2020;";
+    private string string_conexao = "Persist security info = false;" +
+                                        "server=localhost;" +
+                                        "database=dbmvc;" +
+                                        "user=root ; pwd=;";
+   //private string string_conexao = "Persist security info = false;" +
+   //                                           "server=108.179.253.169;" +
+   //                                           "database=silin091_cotemig20201;" +
+   //                                           "user=silin091_cotemig ; pwd=cotemig2020;";
 //
         public void conectar()
         {
